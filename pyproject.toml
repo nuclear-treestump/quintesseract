@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quintesseract"
+version = "0.1.0"
+description = "A balanced quinary computing environment in Python."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "0xIkari", email = "ikari@nuclear-treestump.com" }
+]
+keywords = [
+    "balanced-quinary",
+    "numeral-system",
+    "educational",
+    "setun",
+    "virtual-machine",
+    "computer-science",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Education",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Interpreters",
+    "Topic :: System :: Emulators",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/nuclear-treestump/quintesseract"
+Repository = "https://github.com/nuclear-treestump/quintesseract"
+Issues = "https://github.com/nuclear-treestump/quintesseract/issues"
+
+[project.scripts]
+quint = "quintesseract.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["quintesseract*"]
+exclude = ["tests*"]
+
+[tool.setuptools.package-data]
+quintesseract = ["py.typed"]
